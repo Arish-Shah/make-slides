@@ -1,4 +1,4 @@
-import './css/main.scss';
+import '../css/main.scss';
 
 let root = null;
 let slides = null;

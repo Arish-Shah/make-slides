@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src/js/app.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'make-slides.js',

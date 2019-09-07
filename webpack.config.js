@@ -9,6 +9,14 @@ module.exports = {
     library: 'makeSlides',
     libraryTarget: 'umd'
   },
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      }
+    ]
+  },
   devServer: {
     port: 5500,
     contentBase: path.join(__dirname, 'public')

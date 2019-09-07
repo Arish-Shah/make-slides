@@ -1,24 +1,20 @@
-let makeSlides = null;
+import addEvents from './js/events';
+import './css/main.scss';
+
+let root = null;
 let slides = null;
+let currentSlide = 0;
 
-export function initialize() {
-  makeSlides = document.querySelector('.make-slides');
-  slides = document.querySelectorAll('.make-slides section');
-
-  //Removing all the slide <section> from div.make-slides
-  while (makeSlides.firstChild) {
-    makeSlides.removeChild(makeSlides.firstChild);
+export function init(options) {
+  //parameters provided during initialization
+  if (options) {
+    if (background) document.body.style.background = background;
+    if (color) document.body.style.color = color;
   }
 
-  eventListeners();
-}
+  //getting the elements
+  root = document.querySelector('.make-slides');
+  slides = document.querySelectorAll('.make-slides section');
 
-function eventListeners() {
-  document.onkeyup = function(event) {
-    if (event.keyCode === 39) {
-      console.log('next slide');
-    } else if (event.keyCode === 37) {
-      console.log('prev slide');
-    }
-  };
+  //addEvents
 }

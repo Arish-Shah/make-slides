@@ -11,6 +11,10 @@
   <body>
     <div class="make-slides">
       <section>
+        This is the title slide.
+      </section>
+
+      <section>
         This is the first slide.
       </section>
 
@@ -24,7 +28,10 @@
     </div>
 
     <script>
-      makeSlides.init();
+      makeSlides.init({
+        animationType: 'fade',
+        animationDuration: 300
+      });
     </script>
   </body>
 </html>

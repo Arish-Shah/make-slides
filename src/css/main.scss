@@ -20,6 +20,9 @@ body {
 
 .make-slides {
   section {
+    height: 100vh;
+    width: 100vw;
     padding: 3rem;
+    animation: fade 0.2s linear;
   }
 }

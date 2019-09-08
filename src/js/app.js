@@ -2,7 +2,6 @@ import '../css/main.scss';
 
 let root = null;
 let slides = null;
-let currentSlide = 0;
 
 export function init(options) {
   //getting the elements
@@ -34,20 +33,35 @@ function loadAndHashChangeHandler() {
 }
 
 function keyUpHandler(event) {
+  let currentSlide = window.location.hash.slice(2);
+  currentSlide = currentSlide === '' ? 0 : parseInt(currentSlide);
+
   if (event.keyCode === 37) {
     if (currentSlide > 0) {
-      currentSlide--;
+      currentSlide -= 1;
       window.location.replace('/#/' + currentSlide);
     }
   } else if (event.keyCode === 39) {
     if (currentSlide < slides.length - 1) {
-      currentSlide++;
+      currentSlide += 1;
       window.location.replace('/#/' + currentSlide);
     }
   }
 }
 
-function setOptions(options) {}
+function setOptions(options) {
+  if (options) {
+    if (options.bgColor) {
+      document.body.style.backgroundColor = options.bgColor;
+    }
+    if (options.animationDuration) {
+      slides.forEach(
+        slide =>
+          (slide.style.animationDuration = options.animationDuration / 1000 + 's')
+      );
+    }
+  }
+}
 
 function renderSlide(slideNumber) {
   clearView();

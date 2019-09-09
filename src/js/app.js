@@ -2,11 +2,13 @@ import '../css/main.scss';
 
 let root = null;
 let slides = null;
+let loading = null;
 
 export function init(options) {
   //getting the elements
   root = document.querySelector('.make-slides');
   slides = document.querySelectorAll('.make-slides section');
+  loading = document.querySelector('#loading');
 
   //parameters provided during initialization
   setOptions(options);
@@ -60,12 +62,16 @@ function setOptions(options) {
           (slide.style.animationDuration = options.animationDuration / 1000 + 's')
       );
     }
+    if (options.loadingBar === false) {
+      loading.style.display = 'none';
+    }
   }
 }
 
 function renderSlide(slideNumber) {
   clearView();
   root.appendChild(slides[slideNumber]);
+  loading.style.width = (slideNumber / (slides.length - 1)) * 100 + 'vw';
 
   //checking the data-background attribute
   const currentSlide = document.querySelector('.make-slides section');
@@ -93,7 +99,7 @@ function renderSlide(slideNumber) {
           appears[li].classList.add('hide');
           setTimeout(() => {
             appears[li].style.display = 'none';
-          }, 90);
+          }, 80);
         } else {
           const hash = window.location.hash.slice(2);
           const currentSlide = hash === '' ? 0 : this.parseInt(hash);

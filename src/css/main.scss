@@ -53,3 +53,11 @@ body {
     text-align: center;
   }
 }
+
+#loading {
+  height: 4px;
+  position: fixed;
+  bottom: 0;
+  background: $color;
+  transition: width 0.35s ease;
+}

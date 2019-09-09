@@ -23,6 +23,33 @@ body {
     height: 100vh;
     width: 100vw;
     padding: 3rem;
-    animation: fade 0.2s linear;
+    animation: fade-in 0.2s linear;
+
+    .container {
+      width: 100%;
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+
+      &.appear li {
+        display: none;
+        animation: fade-in 0.15s linear;
+
+        &.hide {
+          animation: fade-out 0.1s linear;
+        }
+      }
+    }
+  }
+
+  .vertical-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }

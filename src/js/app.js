@@ -8,7 +8,11 @@ export function init(options) {
   //getting the elements
   root = document.querySelector('.make-slides');
   slides = document.querySelectorAll('.make-slides section');
-  loading = document.querySelector('#loading');
+
+  //initialising loading bar
+  loading = document.createElement('div');
+  loading.id = 'loading';
+  document.body.append(loading);
 
   //parameters provided during initialization
   setOptions(options);

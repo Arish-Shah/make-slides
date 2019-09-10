@@ -18,7 +18,11 @@ module.exports = {
       }
     ]
   },
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'make-slides.css'
+    })
+  ],
   devServer: {
     port: 5500,
     contentBase: path.join(__dirname, 'public')

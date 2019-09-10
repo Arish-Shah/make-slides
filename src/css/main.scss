@@ -4,60 +4,60 @@
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: $font;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: $font;
 }
 
 html,
 body {
-  font-size: $fontSize;
-  overflow: hidden;
-  color: $color;
-  background-color: $backgroundColor;
+	font-size: $fontSize;
+	overflow: hidden;
+	color: $color;
+	background-color: $backgroundColor;
 }
 
 .make-slides {
-  section {
-    height: 100vh;
-    width: 100vw;
-    padding: 3rem;
-    animation: fade-in 0.2s linear;
+	section {
+		height: 100vh;
+		width: 100vw;
+		padding: 3rem;
+		animation: fade-in 0.2s linear;
 
-    .container {
-      width: 100%;
-      max-width: 840px;
-      margin: 0 auto;
-    }
+		.container {
+			width: 100%;
+			max-width: 840px;
+			margin: 0 auto;
+		}
 
-    ul {
-      margin-left: 1.2rem;
+		ul {
+			margin-left: 1.2rem;
 
-      &.appear li {
-        display: none;
-        animation: fade-in 0.15s linear;
+			&.appear li {
+				display: none;
+				animation: fade-in 0.15s linear;
 
-        &.hide {
-          animation: fade-out 0.1s linear;
-        }
-      }
-    }
-  }
+				&.hide {
+					animation: fade-out 0.1s linear;
+				}
+			}
+		}
+	}
 
-  .vertical-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+	.vertical-center {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
 }
 
 #loading {
-  height: 4px;
-  position: fixed;
-  bottom: 0;
-  background: $color;
-  transition: width 0.35s ease;
+	height: 4px;
+	position: fixed;
+	bottom: 0;
+	background: $color;
+	transition: width 0.4s ease-in-out;
 }

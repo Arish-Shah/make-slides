@@ -1,32 +1,32 @@
 {
-  "name": "make-slides",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack",
-    "build:prod": "webpack -p",
-    "watch": "webpack --watch",
-    "start": "webpack-dev-server --open"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Arish-Shah/make-slides.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Arish-Shah/make-slides/issues"
-  },
-  "homepage": "https://github.com/Arish-Shah/make-slides#readme",
-  "devDependencies": {
-    "css-loader": "^3.2.0",
-    "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.0",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0"
-  }
+	"name": "make-slides",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack",
+		"build:prod": "webpack -p",
+		"watch": "webpack --watch",
+		"start": "webpack-dev-server --open"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Arish-Shah/make-slides.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Arish-Shah/make-slides/issues"
+	},
+	"homepage": "https://github.com/Arish-Shah/make-slides#readme",
+	"devDependencies": {
+		"css-loader": "^3.2.0",
+		"mini-css-extract-plugin": "^0.8.0",
+		"node-sass": "^4.12.0",
+		"sass-loader": "^8.0.0",
+		"webpack": "^4.39.3",
+		"webpack-cli": "^3.3.8",
+		"webpack-dev-server": "^3.8.0"
+	}
 }

@@ -12,9 +12,10 @@
 
 html,
 body {
+	line-height: 1.35;
 	font-size: $fontSize;
 	overflow: hidden;
-	color: $color;
+	color: $primaryColor;
 	background-color: $backgroundColor;
 }
 
@@ -22,6 +23,7 @@ body {
 	section {
 		height: 100vh;
 		width: 100vw;
+		padding: 2.5rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -36,8 +38,8 @@ body {
 		}
 
 		ul {
-			margin-left: 1.2rem;
 			text-align: left;
+			line-height: 1.5;
 
 			&.appear li {
 				opacity: 0;
@@ -45,12 +47,92 @@ body {
 			}
 		}
 	}
+
+	a {
+		text-decoration: none;
+		color: $linkColor;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	*::selection {
+		color: $primaryColor;
+		background-color: $mutedColor;
+	}
+
+	.muted {
+		color: $mutedColor;
+	}
+
+	.secondary {
+		color: $secondaryColor;
+	}
+
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.17rem;
+	}
+
+	h5 {
+		font-size: 1rem;
+	}
+
+	h6 {
+		font-size: 0.83rem;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0 0 20px 0;
+		line-height: 1.2;
+	}
 }
 
 #loading {
 	height: 4px;
 	position: fixed;
 	bottom: 0;
-	background: $color;
+	background: $mutedColor;
 	transition: width 0.4s ease-in-out;
+}
+
+#controls {
+	position: fixed;
+	bottom: 10px;
+	right: 20px;
+	display: flex;
+	flex-direction: row;
+	width: 60px;
+	justify-content: space-between;
+
+	a {
+		padding: 0;
+		user-select: none;
+		text-decoration: none;
+		color: $mutedColor;
+		font-size: 3rem;
+		transition: color 0.1s ease;
+		cursor: pointer;
+
+		&:active {
+			color: $primaryColor;
+		}
+	}
 }

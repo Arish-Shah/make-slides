@@ -11,11 +11,15 @@
 	<body>
 		<div class="make-slides">
 			<section>
-				This is the title slide.
+				<h1>make-slides</h1>
+				<h3>A JavaScript presentation Library.</h3>
+				<small>
+					Made by <a href="https://github.com/Arish-Shah">Arish Shah</a>
+				</small>
 			</section>
 
-			<section data-bg="#000">
-				This is the first slide.
+			<section data-bg="#">
+				<h3>You can change the background color of the slides.</h3>
 			</section>
 
 			<section>
@@ -38,7 +42,9 @@
 		</div>
 
 		<script>
-			makeSlides.init();
+			makeSlides.init({
+				showControls: true
+			});
 		</script>
 	</body>
 </html>

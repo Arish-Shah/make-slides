@@ -91,7 +91,7 @@ function renderSlide(slideNumber) {
 		let li = 0;
 
 		for (let appear of appears) {
-			if (appear.style.display === 'list-item') {
+			if (appear.style.opacity == 1) {
 				li += 1;
 			}
 		}
@@ -101,10 +101,7 @@ function renderSlide(slideNumber) {
 			if (event.keyCode === 37) {
 				if (li > 0) {
 					li -= 1;
-					appears[li].classList.add('hide');
-					setTimeout(() => {
-						appears[li].style.display = 'none';
-					}, 80);
+					appears[li].style.opacity = 0;
 				} else {
 					const hash = window.location.hash.slice(2);
 					const currentSlide = hash === '' ? 0 : this.parseInt(hash);
@@ -117,7 +114,7 @@ function renderSlide(slideNumber) {
 					if (appears[li].classList.contains('hide')) {
 						appears[li].classList.remove('hide');
 					}
-					appears[li].style.display = 'list-item';
+					appears[li].style.opacity = 1;
 					li += 1;
 				} else {
 					const hash = window.location.hash.slice(2);

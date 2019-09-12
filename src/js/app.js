@@ -15,7 +15,7 @@ export function init(options) {
 	loading.id = 'loading';
 	document.body.append(loading);
 
-	//parameters provided during initialization
+	//parameters provided during creation
 	setOptions(options);
 
 	//events
@@ -64,9 +64,7 @@ function renderSlide(slideNumber) {
 	//checking the data-background attribute
 	const currentSlide = document.querySelector('.make-slides section');
 	if (currentSlide.hasAttribute('data-bg')) {
-		if (/#\d{3,6}/.test(currentSlide.getAttribute('data-bg'))) {
-			currentSlide.style.backgroundColor = currentSlide.getAttribute('data-bg');
-		}
+		currentSlide.style.background = currentSlide.getAttribute('data-bg');
 	}
 
 	//rendering the left-right controls
@@ -154,7 +152,7 @@ function renderControls(slideNumber) {
 	document.body.appendChild(controls);
 }
 
-//parameters passed during makeSlides.init({---})
+//parameters passed during makeSlides.create({---})
 function setOptions(options) {
 	if (options) {
 		if (options.bgColor) {

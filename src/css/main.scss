@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import './themes/default.scss';
 @import './animations.scss';
 
 *,
@@ -17,12 +17,13 @@ body {
 	overflow: hidden;
 	color: $primaryColor;
 	background-color: $backgroundColor;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .make-slides {
 	section {
 		height: 100vh;
-		width: 100vw;
+		width: 100%;
 		padding: 2.5rem;
 		display: flex;
 		flex-direction: column;
@@ -35,6 +36,18 @@ body {
 			width: 100%;
 			max-width: 840px;
 			margin: 0 auto;
+		}
+
+		code {
+			background: $darkerColor;
+			padding: 0.5rem 1rem;
+			font-family: $monospace;
+			color: $secondaryColor;
+			border-radius: 0.25rem;
+		}
+
+		p {
+			margin-bottom: 20px;
 		}
 
 		ul {
@@ -103,6 +116,11 @@ body {
 		margin: 0 0 20px 0;
 		line-height: 1.2;
 	}
+
+	small {
+		color: $mutedColor;
+		font-size: 1rem;
+	}
 }
 
 #loading {
@@ -131,8 +149,23 @@ body {
 		transition: color 0.1s ease;
 		cursor: pointer;
 
+		&:first-child {
+			opacity: 0.4;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+
 		&:active {
 			color: $primaryColor;
 		}
+	}
+}
+
+@media (max-width: 600px) {
+	html,
+	body {
+		font-size: $fontMobileSize;
 	}
 }

@@ -2,7 +2,7 @@ import '../css/main.scss';
 
 let root = null;
 let slides = null;
-let loading = null;
+let progress = null;
 let controls = null;
 let codes = null;
 
@@ -10,16 +10,16 @@ export function init(options) {
 	//getting the elements
 	root = document.querySelector('.make-slides');
 	slides = document.querySelectorAll('.make-slides section');
-	codes = document.querySelectorAll('.make-slides section code');
+	codes = document.querySelectorAll('.make-slides section code pre');
 
 	if (codes.length > 0) {
-		codes.forEach(code => (code.textContent = code.innerHTML));
+		codes.forEach(code => (code.textContent = code.innerHTML.trim()));
 	}
 
-	//initialising loading bar
-	loading = document.createElement('div');
-	loading.id = 'loading';
-	document.body.append(loading);
+	//initialising progress bar
+	progress = document.createElement('div');
+	progress.id = 'progress';
+	document.body.append(progress);
 
 	//parameters provided during creation
 	setOptions(options);
@@ -65,7 +65,7 @@ function keyUpHandler(event) {
 function renderSlide(slideNumber) {
 	clearView();
 	root.appendChild(slides[slideNumber]);
-	loading.style.width = (slideNumber / (slides.length - 1)) * 100 + 'vw';
+	progress.style.width = (slideNumber / (slides.length - 1)) * 100 + 'vw';
 
 	//checking the data-background attribute
 	const currentSlide = document.querySelector('.make-slides section');
@@ -164,15 +164,31 @@ function setOptions(options) {
 		if (options.bgColor) {
 			document.body.style.backgroundColor = options.bgColor;
 		}
+
 		if (options.animationDuration) {
 			slides.forEach(
 				slide =>
 					(slide.style.animationDuration = options.animationDuration / 1000 + 's')
 			);
+
+			document.querySelectorAll(
+				'.make-slides section .appear li'
+			).style.transition = `opacity ${options.animationDuration / 1000}s linear`;
 		}
-		if (options.loadingBar === false) {
-			loading.style.display = 'none';
+
+		if (options.transition === null) {
+			slides.forEach(slide => (slide.style.animation = 'none'));
+
+			const appears = document.querySelectorAll('.make-slides section .appears li');
+			if (appears.length > 0) {
+				appears.forEach(li => (li.style.transition = 'none'));
+			}
 		}
+
+		if (options.progressBar === false) {
+			progress.style.display = 'none';
+		}
+
 		if (options.showControls === false) {
 			document.querySelector('#controls').style.display = 'none';
 		}

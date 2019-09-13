@@ -29,8 +29,8 @@
 				<ul>
 					<li>Press the right arrow</li>
 					<ul class="appear">
-						<li>to reaveal</li>
-						<li>the following</li>
+						<li>to reveal</li>
+						<li>the hidden</li>
 						<li>list items</li>
 					</ul>
 				</ul>
@@ -39,12 +39,26 @@
 			<section>
 				<h2>Code</h2>
 				<code>
-					<button>This is a button</button>
+					<pre>
+						<button>This is a button</button>
+					</pre>
 				</code>
 			</section>
 
-			<section>
-				<p>Use<pre>data-bg</pre></p>
+			<section style="color: #121b23;" data-bg="#e0f0ff">
+				<h2>Custom Background</h2>
+				<p class="container">
+					Use <code>data-bg="#e0f0ff"</code> to add a custom background of #e0f0ff to
+					the slide. All valid CSS color formats are supported.
+				</p>
+			</section>
+
+			<section data-bg="linear-gradient(to right bottom, #44a08d, #093637)">
+				<h2>Gradients</h2>
+				<p class="container">
+					<code>data-bg="linear-gradient(#44a08d, #093637)"</code> adds a custom
+					gradient to the background.
+				</p>
 			</section>
 
 			<section>
@@ -96,7 +110,7 @@
 
 			<section class="image-and-text">
 				<div class="text">
-					<h3>Also, Text and Image</h3>
+					<h3>Text and Image</h3>
 				</div>
 				<img src="./assets/img.jpg" />
 			</section>
@@ -110,15 +124,20 @@
 
 			<section>
 				<h2>Connect slides</h2>
-				<p>Two slides can be connected using the &lt;a&gt; tag.</p>
+				<p>Two slides can be connected using the <code>&lt;a&gt;</code> tag.</p>
 				<p>For instance, to go to slide 5, <a href="/#/5">click here</a>.</p>
+			</section>
+
+			<section>
+				<h2>Get Started</h2>
+				<a href="https://github.com/Arish-Shah/make-slides"
+					>Documentation and Source Code</a
+				>
 			</section>
 		</div>
 
-		<script>
-			makeSlides.init({
-				showControls: true
-			});
+		<script type="text/javascript">
+			makeSlides.init();
 		</script>
 	</body>
 </html>

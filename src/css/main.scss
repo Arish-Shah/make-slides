@@ -80,6 +80,17 @@ body {
 			margin: 0 auto;
 		}
 
+		code {
+			font-family: $monospace;
+		}
+
+		pre {
+			padding: 0.5rem 1rem;
+			border-radius: 0.25rem;
+			color: $secondaryColor;
+			background: $darkerColor;
+		}
+
 		blockquote {
 			font-weight: bold;
 			width: 70%;
@@ -107,19 +118,6 @@ body {
 					border: none;
 				}
 			}
-		}
-
-		code {
-			background: $darkerColor;
-			padding: 0.5rem 1rem;
-			font-family: $monospace;
-			color: $secondaryColor;
-			border-radius: 0.25rem;
-		}
-
-		pre {
-			font-family: $monospace;
-			display: inline-block;
 		}
 
 		p {
@@ -200,7 +198,7 @@ body {
 	}
 }
 
-#loading {
+#progress {
 	height: 4px;
 	position: fixed;
 	bottom: 0;

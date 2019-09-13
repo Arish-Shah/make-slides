@@ -23,8 +23,8 @@ body {
 .make-slides {
 	section {
 		height: 100vh;
-		width: 100%;
-		padding: 2.5rem;
+		width: 100vw;
+		padding: 1rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -32,10 +32,58 @@ body {
 		text-align: center;
 		animation: fade-in 0.2s linear;
 
+		&.image-and-text {
+			padding: 0rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+
+			img {
+				max-width: 50%;
+			}
+
+			.text {
+				width: 50%;
+				padding: 1.5rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+
 		.container {
 			width: 100%;
 			max-width: 840px;
 			margin: 0 auto;
+		}
+
+		blockquote {
+			font-weight: bold;
+			width: 70%;
+			font-style: italic;
+			font-size: 1.5rem;
+		}
+
+		blockquote + p {
+			font-size: 1rem;
+			margin-top: 1.25rem;
+		}
+
+		table {
+			border-collapse: collapse;
+
+			td,
+			th {
+				border-bottom: 1px solid $primaryColor;
+				padding: 0.25rem 0.65rem;
+				text-align: left;
+			}
+
+			tr:last-child {
+				td {
+					border: none;
+				}
+			}
 		}
 
 		code {
@@ -115,6 +163,7 @@ body {
 	h6 {
 		margin: 0 0 20px 0;
 		line-height: 1.2;
+		text-transform: uppercase;
 	}
 
 	small {

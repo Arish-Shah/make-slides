@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="make-slides.css" />
 		<script src="make-slides.js"></script>
 		<title>Make Slides</title>
 	</head>
@@ -17,7 +16,7 @@
 			</section>
 
 			<section>
-				<h3>Unordered Lists</h3>
+				<h3>Unordered List</h3>
 				<ul>
 					<li>A first thing</li>
 					<li>A second thing</li>
@@ -26,20 +25,26 @@
 			</section>
 
 			<section>
-				<h4>You can even make list items appear, press the right arrow</h4>
-				<ul class="appear">
+				<h3>Appearing List</h3>
+				<ul>
 					<li>Press the right arrow</li>
+					<ul class="appear">
+						<li>to reaveal</li>
+						<li>the following</li>
+						<li>list items</li>
+					</ul>
 				</ul>
 			</section>
 
 			<section>
+				<h3>Code</h3>
 				<code>
 					document.querySelector('.slides');
 				</code>
 			</section>
 
 			<section>
-				<h2>Table</h2>
+				<h3>Table</h3>
 				<table>
 					<thead>
 						<tr>
@@ -69,7 +74,7 @@
 			</section>
 
 			<section>
-				<h2>BlockQuote</h2>
+				<h3>BlockQuote</h3>
 				<blockquote>
 					"If civilization is to survive, we must cultivate the science of human
 					relationships - the ability of all peoples, of all kinds, to live together,
@@ -81,18 +86,29 @@
 			<section class="image-and-text">
 				<img src="./assets/img.jpg" />
 				<div class="text">
-					<h2>Image and Text</h2>
+					<h3>Image and Text</h3>
 				</div>
 			</section>
 
 			<section class="image-and-text">
 				<div class="text">
-					<h2>Also, Text and Image</h2>
+					<h3>Also, Text and Image</h3>
 				</div>
 				<img src="./assets/img.jpg" />
 			</section>
 
-			<section></section>
+			<section class="image-with-caption">
+				<img src="./assets/big.jpg" />
+				<div class="caption">
+					<h3>Image with Caption</h3>
+				</div>
+			</section>
+
+			<section>
+				<h3>Connect slides</h3>
+				<p>Two slides can be connected using the &lt;a&gt; tag.</p>
+				<p>For instance, to go to slide 5, <a href="/#/5">click here</a>.</p>
+			</section>
 		</div>
 
 		<script>

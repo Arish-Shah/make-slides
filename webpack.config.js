@@ -1,5 +1,4 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 	mode: 'development',
@@ -14,15 +13,10 @@ module.exports = {
 		rules: [
 			{
 				test: /\.s[ac]ss$/i,
-				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+				use: ['style-loader', 'css-loader', 'sass-loader']
 			}
 		]
 	},
-	plugins: [
-		new MiniCssExtractPlugin({
-			filename: 'make-slides.css'
-		})
-	],
 	devServer: {
 		port: 5500,
 		contentBase: path.join(__dirname, 'public')

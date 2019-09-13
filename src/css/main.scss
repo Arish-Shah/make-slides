@@ -117,6 +117,11 @@ body {
 			border-radius: 0.25rem;
 		}
 
+		pre {
+			font-family: $monospace;
+			display: inline-block;
+		}
+
 		p {
 			margin-bottom: 20px;
 		}

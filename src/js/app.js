@@ -4,11 +4,17 @@ let root = null;
 let slides = null;
 let loading = null;
 let controls = null;
+let codes = null;
 
 export function init(options) {
 	//getting the elements
 	root = document.querySelector('.make-slides');
 	slides = document.querySelectorAll('.make-slides section');
+	codes = document.querySelectorAll('.make-slides section code');
+
+	if (codes.length > 0) {
+		codes.forEach(code => (code.textContent = code.innerHTML));
+	}
 
 	//initialising loading bar
 	loading = document.createElement('div');

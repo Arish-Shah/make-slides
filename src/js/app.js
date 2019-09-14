@@ -32,15 +32,15 @@ export function init(options) {
 function loadAndHashChangeHandler() {
 	const hash = window.location.hash;
 	if (!hash) {
-		window.location.replace('/#/');
+		window.location.replace('#/');
 	} else if (/#\/[0-9]*$/i.exec(hash)) {
 		const slideNumber = hash.slice(2) === '' ? 0 : parseInt(hash.slice(2));
 		if (slideNumber < 0 || slideNumber === NaN || slideNumber === undefined) {
-			window.location.replace('/#/');
+			window.location.replace('#/');
 		} else if (hash === '#/0') {
-			window.location.replace('/#/');
+			window.location.replace('#/');
 		} else if (slideNumber >= slides.length) {
-			window.location.replace('/#/' + (slides.length - 1));
+			window.location.replace('#/' + (slides.length - 1));
 		} else renderSlide(slideNumber);
 	}
 }
@@ -52,12 +52,12 @@ function keyUpHandler(event) {
 	if (event.keyCode === 37) {
 		if (currentSlide > 0) {
 			currentSlide -= 1;
-			window.location.replace('/#/' + currentSlide);
+			window.location.replace('#/' + currentSlide);
 		}
 	} else if (event.keyCode === 39 || event.keyCode === 32) {
 		if (currentSlide < slides.length - 1) {
 			currentSlide += 1;
-			window.location.replace('/#/' + currentSlide);
+			window.location.replace('#/' + currentSlide);
 		}
 	}
 }
@@ -97,7 +97,7 @@ function renderSlide(slideNumber) {
 					const hash = window.location.hash.slice(2);
 					const currentSlide = hash === '' ? 0 : this.parseInt(hash);
 					if (currentSlide > 0) {
-						window.location.replace('/#/' + (currentSlide - 1));
+						window.location.replace('#/' + (currentSlide - 1));
 					}
 				}
 			} else if (event.keyCode === 39 || event.keyCode === 32) {
@@ -111,7 +111,7 @@ function renderSlide(slideNumber) {
 					const hash = window.location.hash.slice(2);
 					const currentSlide = hash === '' ? 0 : this.parseInt(hash);
 					if (currentSlide < slides.length - 1) {
-						window.location.replace('/#/' + (currentSlide + 1));
+						window.location.replace('#/' + (currentSlide + 1));
 					}
 				}
 			}

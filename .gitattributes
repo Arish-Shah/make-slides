@@ -1,2 +1,2 @@
-* linguist-vendored
-*.js linguist-vendored=false
+src/css/* linguist-vendored
+src/css/themes/* linguist-vendored

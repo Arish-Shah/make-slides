@@ -4,7 +4,7 @@ module.exports = {
 	mode: 'development',
 	entry: './src/js/app.js',
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'build'),
 		filename: 'make-slides.js',
 		library: 'makeSlides',
 		libraryTarget: 'umd'

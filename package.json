@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "webpack -p",
+		"build": "rm -rf build && webpack -p && cp public/index.html build/index.html",
 		"watch": "webpack --watch",
 		"start": "webpack-dev-server --open"
 	},

@@ -145,11 +145,6 @@ body {
 		}
 	}
 
-	*::selection {
-		color: $primaryColor;
-		background-color: $mutedColor;
-	}
-
 	.muted {
 		color: $mutedColor;
 	}
@@ -194,8 +189,8 @@ body {
 	}
 
 	small {
-		color: $mutedColor;
-		font-size: 1rem;
+		font-size: 0.85rem;
+		margin-top: 1.25rem;
 	}
 }
 

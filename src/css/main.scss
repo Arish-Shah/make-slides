@@ -209,7 +209,7 @@ body {
 	right: 20px;
 	display: flex;
 	flex-direction: row;
-	width: 60px;
+	width: 3.5rem;
 	justify-content: space-between;
 
 	a {
@@ -217,7 +217,7 @@ body {
 		user-select: none;
 		text-decoration: none;
 		color: $mutedColor;
-		font-size: 3rem;
+		font-size: 3.5rem;
 		transition: color 0.1s ease;
 		cursor: pointer;
 

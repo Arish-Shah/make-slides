@@ -6,7 +6,7 @@ module.exports = {
 	entry: './src/js/app.js',
 	output: {
 		path: path.resolve(__dirname, 'build'),
-		filename: 'js/make-slides.js',
+		filename: 'lib/make-slides.js',
 		library: 'makeSlides',
 		libraryTarget: 'umd'
 	},

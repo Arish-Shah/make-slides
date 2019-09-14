@@ -1,6 +1,9 @@
 @import './themes/default.scss';
 @import './animations.scss';
 
+$fontSize: 1.5rem;
+$fontMobileSize: 1.15rem;
+
 *,
 *::after,
 *::before {
@@ -94,12 +97,13 @@ body {
 
 		blockquote {
 			font-weight: bold;
-			width: 70%;
+			width: 65%;
+			font-size: 1.65rem;
 			font-style: italic;
-			font-size: 1.5rem;
 		}
 
 		blockquote + p {
+			font-size: $fontMobileSize;
 			font-size: 1rem;
 			margin-top: 1.25rem;
 		}
@@ -154,27 +158,27 @@ body {
 	}
 
 	h1 {
-		font-size: 2.5rem;
+		font-size: 3.5rem;
 	}
 
 	h2 {
-		font-size: 2rem;
+		font-size: 2.25rem;
 	}
 
 	h3 {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 
 	h4 {
-		font-size: 1.17rem;
+		font-size: 1.5rem;
 	}
 
 	h5 {
-		font-size: 1rem;
+		font-size: 1.25rem;
 	}
 
 	h6 {
-		font-size: 0.83rem;
+		font-size: 1rem;
 	}
 
 	h1,

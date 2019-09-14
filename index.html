@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- Meta Tags --->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="author" content="Arish Rahil Shah" />
+		<meta name="description" content="make-slides is an easy to use JavaScript library that lets you create interactive presentations using only HTML Elements." />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<!--/ Meta Tags -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="canonical" href="https://make-slides.netlify.com/" />
 		<script src="./lib/make-slides.js"></script>
-		<title>Make Slides</title>
+		<title>make-slides: JavaScript presentation library</title>
 	</head>
+
 	<body>
 		<div class="make-slides">
 			<section>
@@ -48,16 +60,16 @@
 			<section style="color: #121b23;" data-bg="#e0f0ff">
 				<h2>Custom Background</h2>
 				<p class="container">
-					Use <code>data-bg="#e0f0ff"</code> to add a custom background of #e0f0ff to
-					the slide. All valid CSS color formats are supported.
+					Use <code>data-bg="#fff"</code> to add a custom background to the slide.
+					All valid CSS color formats are supported.
 				</p>
 			</section>
 
-			<section data-bg="linear-gradient(to right bottom, #44a08d, #093637)">
+			<section data-bg="linear-gradient(135deg, #c31432, #240b36)">
 				<h2>Gradients</h2>
 				<p class="container">
-					<code>data-bg="linear-gradient(#44a08d, #093637)"</code> adds a custom
-					gradient to the background.
+					<code>data-bg="linear-gradient(#fff, #000)"</code> adds a custom gradient
+					to the background.
 				</p>
 			</section>
 
@@ -111,6 +123,7 @@
 			<section class="image-and-text">
 				<div class="text">
 					<h3>Text and Image</h3>
+					<p>(Flipped)</p>
 				</div>
 				<img src="https://via.placeholder.com/1600x1600" />
 			</section>
@@ -122,21 +135,38 @@
 				</div>
 			</section>
 
+			<section class="theme">
+				<h2>Themable</h2>
+				<p class="container">
+					Don't like the default look, use some of the predefined themes or create
+					one yourself.
+				</p>
+			</section>
+
 			<section>
 				<h2>Connect slides</h2>
 				<p>Two slides can be connected using the <code>&lt;a&gt;</code> tag.</p>
-				<p>For instance, to go to slide 5, <a href="#/5">click here</a>.</p>
+				<p>For instance, to go to slide 5, <a href="#/5">click here</a>👈</p>
+			</section>
+
+			<section>
+				<h2>Customizable</h2>
+				<p>Don't want animations, controls or progress bar?</p>
+				<p>
+					They are customizable too. Just pass the parameters during initialization.
+				</p>
+				<pre><code>makeSlides.init({ controls: false });</code></pre>
 			</section>
 
 			<section>
 				<h2>Get Started</h2>
-				<a href="https://github.com/Arish-Shah/make-slides"
-					>Documentation and Source Code</a
-				>
-				<small
-					>Made by
-					<a href="https://github.com/Arish-Shah" target="_blank">Arish</a></small
-				>
+				<a href="https://github.com/Arish-Shah/make-slides">
+					Documentation and Source Code
+				</a>
+				<small>
+					Made by
+					<a href="https://github.com/Arish-Shah" target="_blank">Arish</a>
+				</small>
 			</section>
 		</div>
 

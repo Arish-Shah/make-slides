@@ -6,7 +6,7 @@ module.exports = {
 	entry: './src/js/app.js',
 	output: {
 		path: path.resolve(__dirname, 'build'),
-		filename: 'make-slides.js',
+		filename: 'js/make-slides.js',
 		library: 'makeSlides',
 		libraryTarget: 'umd'
 	},
@@ -21,6 +21,7 @@ module.exports = {
 	plugins: [new CopyPlugin([{ from: 'public' }])],
 	devServer: {
 		port: 5500,
-		contentBase: path.join(__dirname, 'public')
+		contentBase: path.join(__dirname, 'public'),
+		publicPath: '/'
 	}
 };

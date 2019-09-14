@@ -1,9 +1,6 @@
 @import './themes/default.scss';
 @import './animations.scss';
 
-$fontSize: 1.5rem;
-$fontMobileSize: 1.15rem;
-
 *,
 *::after,
 *::before {
@@ -16,7 +13,7 @@ $fontMobileSize: 1.15rem;
 html,
 body {
 	line-height: 1.35;
-	font-size: $fontSize;
+	font-size: 1.5rem;
 	overflow: hidden;
 	color: $primaryColor;
 	background-color: $backgroundColor;
@@ -103,7 +100,7 @@ body {
 		}
 
 		blockquote + p {
-			font-size: $fontMobileSize;
+			font-size: 1.15rem;
 			font-size: 1rem;
 			margin-top: 1.25rem;
 		}
@@ -238,25 +235,30 @@ body {
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1025px) {
 	html,
 	body {
-		font-size: $fontMobileSize;
+		font-size: 1.35rem;
 	}
+}
 
-	.make-slides {
-		.image-and-text {
-			display: flex;
-			flex-direction: column;
+@media (max-width: 801) {
+	html,
+	body {
+		font-size: 1.25rem;
+	}
+}
 
-			img {
-				max-width: 100%;
-				width: 100%;
-			}
+@media (max-width: 601px) {
+	html,
+	body {
+		font-size: 1.1rem;
+	}
+}
 
-			.text {
-				width: 100%;
-			}
-		}
+@media (max-width: 481px) {
+	html,
+	body {
+		font-size: 0.83rem;
 	}
 }

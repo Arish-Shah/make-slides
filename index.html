@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<script src="./make-slides.js"></script>
+		<title>Make Slides</title>
+	</head>
+	<body>
+		<div class="make-slides">
+			<section>
+				<h1 style="text-transform: none;">make-slides</h1>
+				<h3>JavaScript presentation library</h3>
+				<p>🌈📝🚀</p>
+			</section>
+
+			<section>
+				<h2>Unordered List</h2>
+				<ul>
+					<li>A first thing</li>
+					<li>A second thing</li>
+					<li>A third thing</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Appearing List</h2>
+				<ul>
+					<li>Press the right arrow</li>
+					<ul class="appear">
+						<li>to reveal</li>
+						<li>the hidden</li>
+						<li>list items</li>
+					</ul>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Code</h2>
+				<code>
+					<pre>
+						<button>This is a button</button>
+					</pre>
+				</code>
+			</section>
+
+			<section style="color: #121b23;" data-bg="#e0f0ff">
+				<h2>Custom Background</h2>
+				<p class="container">
+					Use <code>data-bg="#e0f0ff"</code> to add a custom background of #e0f0ff to
+					the slide. All valid CSS color formats are supported.
+				</p>
+			</section>
+
+			<section data-bg="linear-gradient(to right bottom, #44a08d, #093637)">
+				<h2>Gradients</h2>
+				<p class="container">
+					<code>data-bg="linear-gradient(#44a08d, #093637)"</code> adds a custom
+					gradient to the background.
+				</p>
+			</section>
+
+			<section>
+				<h2>Table</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>SNo</th>
+							<th>Title</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>The Merchant of Venice</td>
+							<td>$6</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>A Christmas Carol</td>
+							<td>$7</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Hamlet</td>
+							<td>$5</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section>
+				<h2>BlockQuote</h2>
+				<blockquote>
+					"If civilization is to survive, we must cultivate the science of human
+					relationships - the ability of all peoples, of all kinds, to live together,
+					in the same world at peace."
+				</blockquote>
+				<p>– Franklin D. Roosevelt</p>
+			</section>
+
+			<section class="image-and-text">
+				<img src="https://source.unsplash.com/3kEkV4Aj0Lc/1600x1600" />
+				<div class="text">
+					<h3>Image and Text</h3>
+				</div>
+			</section>
+
+			<section class="image-and-text">
+				<div class="text">
+					<h3>Text and Image</h3>
+				</div>
+				<img src="https://source.unsplash.com/3kEkV4Aj0Lc/1600x1600" />
+			</section>
+
+			<section class="image-with-caption">
+				<img src="https://source.unsplash.com/WLUHO9A_xik/2048x1024" />
+				<div class="caption">
+					<h3>Image with Caption</h3>
+				</div>
+			</section>
+
+			<section>
+				<h2>Connect slides</h2>
+				<p>Two slides can be connected using the <code>&lt;a&gt;</code> tag.</p>
+				<p>For instance, to go to slide 5, <a href="/#/5">click here</a>.</p>
+			</section>
+
+			<section>
+				<h2>Get Started</h2>
+				<a href="https://github.com/Arish-Shah/make-slides"
+					>Documentation and Source Code</a
+				>
+				<small
+					>Made by
+					<a href="https://github.com/Arish-Shah" target="_blank">Arish</a></small
+				>
+			</section>
+		</div>
+
+		<script type="text/javascript">
+			makeSlides.init();
+		</script>
+	</body>
+</html>

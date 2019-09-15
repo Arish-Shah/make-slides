@@ -12,8 +12,13 @@
 		"type": "git",
 		"url": "git+https://github.com/Arish-Shah/make-slides.git"
 	},
-	"keywords": [],
-	"author": "",
+	"keywords": [
+		"slides",
+		"slideshow",
+		"presentation",
+		"javascript"
+	],
+	"author": "Arish Rahil Shah",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/Arish-Shah/make-slides/issues"

@@ -120,4 +120,4 @@ To change the background of individual slides, use the attribute `data-bg`
 
 ## License
 
-[MIT](LICENSE)
+This project is open source and available under the [MIT License](LICENSE).

@@ -11,7 +11,7 @@ An easy-to-use JavaScript library that lets you create beautiful and interactive
 ### Get Started Immediately
 
 Just download the zip file, customize index.html and open it in a browser\
-[arish-shah.github.io/make-slides/makeSlides-latest.zip](https://arish-shah.github.io/make-slides/makeSlides-latest.zip)
+[arish-shah.github.io/make-slides/ms.zip](https://arish-shah.github.io/make-slides/ms.zip)
 
 ### Full Setup
 

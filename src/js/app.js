@@ -189,7 +189,7 @@ function setOptions(options) {
 			progress.style.display = 'none';
 		}
 
-		if (options.showControls === false) {
+		if (options.controls === false) {
 			document.querySelector('#controls').style.display = 'none';
 		}
 	}

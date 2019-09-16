@@ -11,7 +11,7 @@ An easy-to-use JavaScript library that lets you create beautiful and interactive
 ### Get Started Immediately
 
 Just download the zip file, customize index.html and open it in a browser\
-[https://arish-shah.github.io/make-slides/make-slides-latest.zip](https://arish-shah.github.io/make-slides/make-slides-latest.zip)
+[arish-shah.github.io/make-slides/makeSlides-latest.zip](https://arish-shah.github.io/make-slides/makeSlides-latest.zip)
 
 ### Full Setup
 
@@ -67,7 +67,56 @@ Each parent `<section>` in `.make-slides` is an individual slide
 
 ## Configuration
 
+In order to change the default behaviour, configuration values can be provided. They are optional, and if not provided will default to the following values.
+
+```javascript
+makeSlides.init({
+
+	// Background color of the presentation
+	bgColor: '#121d23',
+
+	//Change the animation duration for slide transition
+	animationDuration: 100,
+
+	//To remove the slide transition animation
+	transition: null
+
+	//Show/Hide the bottom progress bar
+	progressBar: true
+
+	//Show/Hide the slide controls
+	controls: true
+
+});
+```
+
 ## Theming
+
+A custom theme can be used by importing them in your `main.scss` file in `src/css` folder. Make sure to get rid of the default style import.
+
+```scss
+@import './themes/yellow.scss';
+```
+
+### Attributes
+
+To change the background of individual slides, use the attribute `data-bg`
+
+```html
+<div class="make-slides">
+	<section data-bg="#fd0">
+		<!-- Slide with yellow background -->
+	</section>
+
+	<section data-bg="linear-gradient(to right, #fd0, #ff0)">
+		<!-- Slide with gradient background -->
+	</section>
+
+	<section data-bg="url(./assets/image.jpg)">
+		<!-- Slide with a custom image as background -->
+	</section>
+</div>
+```
 
 ## License
 

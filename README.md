@@ -44,6 +44,27 @@ To gain full control over the library, its styles and functions, you'll need to 
 - **src/css/** Core library styles
 - **src/js/** Core library scripts
 
+## Markup
+
+Each parent `<section>` in `.make-slides` is an individual slide
+
+```html
+<html>
+	<head>
+		<script src="./js/make-slides.js"></script>
+	</head>
+	<body>
+		<div class="make-slides">
+			<section>First Slide</section>
+			<section>Second Slide</section>
+		</div>
+		<script>
+			makeSlides.init();
+		</script>
+	</body>
+</html>
+```
+
 ## Configuration
 
 ## Theming

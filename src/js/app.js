@@ -4,6 +4,7 @@ let root = null;
 let slides = null;
 let progress = null;
 let controls = null;
+let showControls = true;
 let codes = null;
 
 export function init(options) {
@@ -74,7 +75,9 @@ function renderSlide(slideNumber) {
 	}
 
 	//rendering the left-right controls
-	renderControls(slideNumber);
+	if (showControls) {
+		renderControls(slideNumber);
+	}
 
 	//checking the ul with .appear
 	const appears = document.querySelectorAll('.appear li');
@@ -128,6 +131,7 @@ function renderControls(slideNumber) {
 
 	controls = document.createElement('div');
 	controls.id = 'controls';
+
 	const leftArrow = document.createElement('a');
 	const rightArrow = document.createElement('a');
 
@@ -189,9 +193,7 @@ function setOptions(options) {
 			progress.style.display = 'none';
 		}
 
-		if (options.controls === false) {
-			document.querySelector('#controls').style.display = 'none';
-		}
+		showControls = options.controls;
 	}
 }
 

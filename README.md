@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/Arish-Shah/make-slides?color=blue)](https://github.com/Arish-Shah/make-slides/blob/master/LICENSE) [![Build Status](https://travis-ci.com/Arish-Shah/make-slides.svg?branch=master)](https://travis-ci.com/Arish-Shah/make-slides) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
-An easy-to-use JavaScript library that lets you create beautiful and interactive presentation using HTML Elements.\
+An easy-to-use HTML Framework that lets you create beautiful and interactive presentation using HTML Elements.\
 [View demo](https://arish-shah.github.io/make-slides)
 🌈📝🚀
 

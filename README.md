@@ -50,18 +50,18 @@ Each parent `<section>` in `.make-slides` is an individual slide
 
 ```html
 <html>
-	<head>
-		<script src="./js/make-slides.js"></script>
-	</head>
-	<body>
-		<div class="make-slides">
-			<section>First Slide</section>
-			<section>Second Slide</section>
-		</div>
-		<script>
-			makeSlides.init();
-		</script>
-	</body>
+  <head>
+    <script src="./js/make-slides.js"></script>
+  </head>
+  <body>
+    <div class="make-slides">
+      <section>First Slide</section>
+      <section>Second Slide</section>
+    </div>
+    <script>
+      makeSlides.init()
+    </script>
+  </body>
 </html>
 ```
 
@@ -72,20 +72,20 @@ In order to change the default behaviour, configuration values can be provided. 
 ```javascript
 makeSlides.init({
 
-	// Background color of the presentation
-	bgColor: '#121d23',
+  // Background color of the presentation
+  bgColor: '#121d23',
 
-	//Change the animation duration for slide transition
-	animationDuration: 100,
+  //Change the animation duration for slide transition
+  animationDuration: 100,
 
-	//To remove the slide transition animation
-	transition: null
+  //To remove the slide transition animation
+  transition: null
 
-	//Show/Hide the bottom progress bar
-	progressBar: true
+  //Show/Hide the bottom progress bar
+  progressBar: true
 
-	//Show/Hide the slide controls
-	controls: true
+  //Show/Hide the slide controls
+  controls: true
 
 });
 ```
@@ -104,17 +104,17 @@ To change the background of individual slides, use the attribute `data-bg`
 
 ```html
 <div class="make-slides">
-	<section data-bg="#fd0">
-		<!-- Slide with yellow background -->
-	</section>
+  <section data-bg="#fd0">
+    <!-- Slide with yellow background -->
+  </section>
 
-	<section data-bg="linear-gradient(to right, #fd0, #ff0)">
-		<!-- Slide with gradient background -->
-	</section>
+  <section data-bg="linear-gradient(to right, #fd0, #ff0)">
+    <!-- Slide with gradient background -->
+  </section>
 
-	<section data-bg="url(./assets/image.jpg)">
-		<!-- Slide with a custom image as background -->
-	</section>
+  <section data-bg="url(./assets/image.jpg)">
+    <!-- Slide with a custom image as background -->
+  </section>
 </div>
 ```
 

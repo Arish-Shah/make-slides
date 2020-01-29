@@ -59,7 +59,7 @@ Each parent `<section>` in `.make-slides` is an individual slide
       <section>Second Slide</section>
     </div>
     <script>
-      makeSlides.init()
+      makeSlides.init();
     </script>
   </body>
 </html>

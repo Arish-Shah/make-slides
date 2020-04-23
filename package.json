@@ -2,11 +2,11 @@
   "name": "make-slides",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/make-slides.js",
   "scripts": {
-    "build": "rm -rf build && webpack -p",
-    "watch": "webpack --watch",
-    "start": "webpack-dev-server --open"
+    "prebuild": "rm -rf dist",
+    "build": "rollup -c",
+    "watch": "rollup -wc"
   },
   "repository": {
     "type": "git",
@@ -19,19 +19,16 @@
     "javascript"
   ],
   "author": "Arish Rahil Shah",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Arish-Shah/make-slides/issues"
   },
   "homepage": "https://github.com/Arish-Shah/make-slides#readme",
   "devDependencies": {
-    "copy-webpack-plugin": "^5.0.4",
-    "css-loader": "^3.2.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.0",
-    "style-loader": "^1.0.0",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0"
+    "eslint": "^6.8.0",
+    "rollup": "^2.7.2"
+  },
+  "dependencies": {
+    "rollup-plugin-terser": "^5.3.0"
   }
 }
